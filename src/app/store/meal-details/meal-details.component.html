@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="row" *ngIf="meal">
+    <div class="col-6">
+      <img src="{{meal.mealThumb}}" alt="{{meal.name}}" class="img-fluid w-100">
+      <h1>{{ meal.name }}</h1>
+    </div>
+    <div class="row">
+      <div class="col-12 ml-3">
+          <h4>Area</h4>
+          <p>{{meal.area}}</p>
+      </div>
+  </div>
+    <div class="row">
+        <div class="col-12 ml-3">
+            <h4>Instructions</h4>
+            <p>{{meal.instructions}}</p>
+        </div>
+    </div>
+  </div>
+</div>
+

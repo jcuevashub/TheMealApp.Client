@@ -1,0 +1,11 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes the container take the full height of the viewport */
+}
+
+form {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 500px; /* Maximum width of the form */
+}
