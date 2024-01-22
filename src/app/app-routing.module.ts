@@ -4,8 +4,6 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 import { ServerErrorComponent } from './core/server-error/server-error.component';
 import { UnAuthenticatedComponent } from './core/un-authenticated/un-authenticated.component';
 import { StoreComponent } from './store/store.component';
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
 
 const routes: Routes = [
   {path: '',  component:StoreComponent},

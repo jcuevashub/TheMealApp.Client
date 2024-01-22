@@ -22,7 +22,7 @@ export class AuthHTTPService {
   }
 
   createUser(user: UserModel): Observable<ResponseInfo<UserRespose>> {
-    return this.http.post<ResponseInfo<UserRespose>>(API_URL, user);
+    return this.http.post<ResponseInfo<UserRespose>>(`${API_URL}/sign-up`, user);
   }
 
   forgotPassword(email: string): Observable<boolean> {

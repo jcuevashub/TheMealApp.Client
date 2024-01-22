@@ -1,8 +1,22 @@
-.center-container {
+:host {
+    width: 100%;
+    @media (min-width: 992px) {
+      .login-form {
+        width: 100%;
+        max-width: 450px;
+  
+        .mat-form-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This makes the container take the full height of the viewport */
+    height: 50vh; /* This makes the container take the full height of the viewport */
 }
 
 form {
