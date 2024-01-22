@@ -15,7 +15,6 @@ const API_USERS_URL = `${environment.apiUrl}/v1/auth`;
 export class AuthHTTPService {
   constructor(private http: HttpClient) { }
 
-  // public methods
   login(email: string, password: string): Observable<ResponseInfo<AuthModel>> {
     return this.http.post<ResponseInfo<AuthModel>>(`${API_USERS_URL}/sign-in`, {
       email,
@@ -23,12 +22,10 @@ export class AuthHTTPService {
     });
   }
 
-  // CREATE =>  POST: add a new user to the server
   createUser(user: UserModel): Observable<ResponseInfo<UserRespose>> {
     return this.http.post<ResponseInfo<UserRespose>>(API_USERS_URL, user);
   }
 
-  // Your server should check email => If email exists send link to the user and return true | If email doesn't exist return false
   forgotPassword(email: string): Observable<boolean> {
     return this.http.post<boolean>(`${API_USERS_URL}/forgot-password`, {
       email,

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IMeal } from '../shared/models/meal';
-import { ICategory } from '../shared/models/category';
+import { IMeal } from '../../shared/models/meal';
+import { ICategory } from '../../shared/models/category';
 
 @Injectable({
   providedIn: 'root'

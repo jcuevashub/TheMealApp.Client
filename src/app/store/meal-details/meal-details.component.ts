@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BreadcrumbService } from 'xng-breadcrumb';
-import { StoreService } from '../store.service';
+import { StoreService } from '../../core/services/store.service';
 import { IMeal } from '../../shared/models/meal';
 
 @Component({

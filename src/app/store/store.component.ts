@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { StoreParams } from '../shared/models/storeParams';
 import { ICategory } from '../shared/models/category';
-import { StoreService } from './store.service';
+import { StoreService } from '../core/services/store.service';
 import { IMeal } from '../shared/models/meal';
 import { SignalRService } from '../core/services/signalr.service';
 
