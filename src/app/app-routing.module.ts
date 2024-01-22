@@ -13,8 +13,7 @@ const routes: Routes = [
   {path: 'un-authenticated', component: UnAuthenticatedComponent},
   {path:'server-error', component: ServerErrorComponent},
   {path: 'details', loadChildren:()=>import('./store/store.module').then(mod=>mod.StoreModule)},
-  {path: 'login', component:LoginComponent},
-  {path: 'register', component:RegisterComponent},
+  {path: 'account', loadChildren:()=>import('./account/account.module').then(mod=>mod.AccountModule), data:{breadcrumb:{skip:true}}},
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 

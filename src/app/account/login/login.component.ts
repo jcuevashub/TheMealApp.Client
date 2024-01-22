@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   initForm() {
     this.loginForm = this.fb.group({
       email: [
-        '',
+        'jackson.cuevas@hotmail.com',
         Validators.compose([
           Validators.required,
           Validators.email,
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         ]),
       ],
       password: [
-        '',
+        'sa12345678',
         Validators.compose([
           Validators.required,
           Validators.minLength(3),
@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       .pipe(first())
       .subscribe((user: UserRespose | undefined) => {
         if (user) {
-          this.router.navigate([this.returnUrl]);
+          this.router.navigate(['/']);
         } else {
           this.hasError = true;
         }

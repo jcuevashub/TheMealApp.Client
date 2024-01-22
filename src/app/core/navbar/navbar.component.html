@@ -3,7 +3,7 @@
     </nav>
     <div class="d-flex align-center">
       <section>
-        <button *ngIf="!isUserAuthenticated" class="btn btn-link" style="color:gray" routerLink="/login">Login</button>
+        <button *ngIf="!isUserAuthenticated" class="btn btn-link" style="color:gray" routerLink="/account/login">Login</button>
         <button *ngIf="isUserAuthenticated" class="btn btn-link" style="color:gray" (click)="logout()">Logout</button>
       </section>
     </div>

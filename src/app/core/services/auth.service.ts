@@ -40,8 +40,8 @@ export class AuthService implements OnDestroy {
     this.currentUserSubject = new BehaviorSubject<UserType>(undefined);
     this.currentUser$ = this.currentUserSubject.asObservable();
     this.isLoading$ = this.isLoadingSubject.asObservable();
-    const subscr = this.getUserByToken().subscribe();
-    this.unsubscribe.push(subscr);
+    // const subscr = this.getUserByToken().subscribe();
+    // this.unsubscribe.push(subscr);
   }
 
   login(email: string, password: string): Observable<UserType> {
@@ -63,9 +63,7 @@ export class AuthService implements OnDestroy {
 
   logout() {
     localStorage.removeItem(this.authLocalStorageToken);
-    this.router.navigate(['/auth/sign-in'], {
-      queryParams: {},
-    });
+    this.router.navigate(['/']);
   }
 
   getUserByToken(): Observable<UserType> {
@@ -77,6 +75,7 @@ export class AuthService implements OnDestroy {
     this.isLoadingSubject.next(true);
     return this.authHttpService.getUserByToken(auth.accessToken).pipe(
       map((user: any) => {
+        console.log(user)
         if (user) {
           this.currentUserSubject.next(user.data);
         } else {
