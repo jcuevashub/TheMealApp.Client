@@ -63,6 +63,7 @@ export class AuthService implements OnDestroy {
 
   logout() {
     localStorage.removeItem(this.authLocalStorageToken);
+    this.currentUserSubject.next(undefined);
     this.router.navigate(['/']);
   }
 
@@ -75,7 +76,6 @@ export class AuthService implements OnDestroy {
     this.isLoadingSubject.next(true);
     return this.authHttpService.getUserByToken(auth.accessToken).pipe(
       map((user: any) => {
-        console.log(user)
         if (user) {
           this.currentUserSubject.next(user.data);
         } else {
